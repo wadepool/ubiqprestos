@@ -1,23 +1,35 @@
 const request = require('request');
 const chalk = require('chalk');
+
+// YOU CAN ADD MORE SIZES HERE IF ON THE MAIN WEBPAGE THEY HAVE MORE sizes
+// OUTSIDE OF WHATS HERE...IF YOU WANT TO TARGET 2/3 SIZES, JUST REMOVE SIZES
+// YOU DONT WANT TO GO FOR :OK_HAND: :B:
+let sizes = ['8', '9', '10', '11', '12'];
+
 /**
- * LINK IT POSTS DETAILS TO
+ * CURRENT LINKS IT POSTS DETAILS TO
+ * - Current shoe available
+ * - prestos, am90
  */
 
+// CHANGE ubiqUrl TO THE SNEAKER YOU ARE SIGNING UP FOR
+// -prestos, am90
+let ubiqUrl = 'am90';
 
-let email = ['enter', 'emails', 'here'],
-  name = ["walter", "white"],
-  city = "city",
+// ADD AS MANY EMAILS AS YOU'D LIKE BELOW
+let email = ["EMAIL1", "EMAIL2", "EMAIL3"], //ETC ETC
+  name = ["FIRST", "LAST"],
+  city = "CITY",
   state = "NY",
   pickup = "UBIQ Philadelphia", // change 'Philadelphia' to 'Georgetown' if you dont want Pilly location
-  zip = "00000",
-  phone = "1111111111",
-  size = ["8", "9", "9.5", "10"],
-  dob = "01/01/2000",
-  igName = "ubiqlife"
-  
-let ubiqUrl = 'http://link.ubiqlife.com/join/4z2/offwhite-am90-raffle';
+  zip = "10012",
+  phone = "2129667799",
+  dob = "04/20/1900",
+  igName = ""
+
+
 for(var i = 0; i < email.length; i++) {
+  var size = sizes[Math.floor(Math.random()*sizes.length)];
   let ubiqForm = {
     "email": email[i],
     "vars[raffle_bloodbath]": true,
@@ -28,19 +40,19 @@ for(var i = 0; i < email.length; i++) {
     "vars[Store_Pickup]": pickup,
     "vars[Geolocation_Zip]": zip,
     "vars[phone_number]": phone,
-    "vars[shoe_size]": size[i],
+    "vars[shoe_size]": size,
     "vars[birthday]": dob,
     "vars[instagram]": igName,
     "vars[ubiqmerch_teewhite]": "",
     "vars[ubiqmerch_teeorange]": "",
     "vars[ubiqmerch_teeblack]": "",
-    "vars[ubiqmerch_teehat]": "hat",
+    "vars[ubiqmerch_teehat]": "",
     "profile_id": "",
     "st_form_num": 0
   }
 
   request({
-    url: ubiqUrl,
+    url: `http://link.ubiqlife.com/join/4z2/offwhite-${ubiqUrl}-raffle`,
     method: 'POST',
     followAllRedirects: true,
     headers: {

@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/wadepool/ubiqprestos.git"
   },
-  "author": "",
+  "author": "Rorschach",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wadepool/ubiqprestos/issues"
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/wadepool/ubiqprestos#readme",
   "dependencies": {
     "chalk": "^2.3.0",
-    "cheerio": "^1.0.0-rc.2",
     "request": "^2.83.0"
   }
 }

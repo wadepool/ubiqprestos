@@ -9,11 +9,11 @@ let sizes = ['8', '9', '10', '11', '12'];
 /**
  * CURRENT LINKS IT POSTS DETAILS TO
  * - Current shoe available
- * - prestos, am90
+ * - presto, am90
  */
 
 // CHANGE ubiqUrl TO THE SNEAKER YOU ARE SIGNING UP FOR
-// -prestos, am90
+// -presto, am90
 let ubiqUrl = 'am90';
 
 // ADD AS MANY EMAILS AS YOU'D LIKE BELOW
